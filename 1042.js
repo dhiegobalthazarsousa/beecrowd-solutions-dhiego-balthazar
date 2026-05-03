@@ -11,26 +11,28 @@ let troca = false;
 let i = 0;
 
 
-for(let j = 1; j < valores.length; j++){
-    i = j - 1;
-    if(Number(valores[i]) > Number(valores[j])){
-        menor = valores[j];
-        valores[j] = valores[i];
-        valores[i] = menor;
-        troca = true;
+for (let j = 0; j < valores.length; j++) {
+    let proximo = j + 1;
+    if (proximo) {
+        if (Number(valores[j]) > Number(valores[proximo])) {
+            menor = valores[proximo];
+            valores[proximo] = valores[j];
+            valores[j] = menor;
+            troca = true;
+        }
     }
-    if(troca){
+    if (troca && j === valores.length - 1) {
         troca = false;
-        j = 0;
+        j = -1;
     }
 }
 
-for(valor of valores){
-     console.log(valor);
+for (valor of valores) {
+    console.log(valor);
 }
 
 console.log("");
 
-for(valorRecebido of valoresRecebidos){
-     console.log(valorRecebido);
+for (valorRecebido of valoresRecebidos) {
+    console.log(valorRecebido);
 }
