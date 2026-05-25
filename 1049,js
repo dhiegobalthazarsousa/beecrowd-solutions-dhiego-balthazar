@@ -1,0 +1,34 @@
+let lines = ["invertebrado", "anelideo", "onivoro"];
+
+let animal = "";
+
+if(lines[0] === "vertebrado"){
+    if(lines[1] === "ave"){
+        if(lines[2] === "carnivoro"){
+            animal = "aguia";
+        }else{
+            animal = "pomba";
+        }
+    }else{
+        if(lines[2] === "onivoro"){
+            animal = "homem";
+        }else{
+            animal = "vaca";
+        }
+    }
+}else{
+    if(lines[1] === "inseto"){
+        if(lines[2] === "hematofago"){
+            animal = "pulga";
+        } else {
+            animal = "lagarta";
+        }
+    }else{
+        if(lines[2] === "hematofago"){
+            animal = "sanguessuga";
+        } else {
+            animal = "minhoca";
+        }
+    }
+}
+console.log(animal);
